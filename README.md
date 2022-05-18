@@ -1,6 +1,6 @@
 # Travels App Backend Foreach
 
-**Este proyecto de puedo ejecutar siguiendo las siguientes intrucciones:** 
+**Este proyecto se puede ejecutar siguiendo las siguientes instrucciones:** 
 
 1. Instalar las dependencias haciendo uso del comando **npm install** o **yarn install**.
 2. Solicitar al propietario del proyecto la carpeta config, esta se debe agregar al root del proyecto para su correcto funcionamiento.
