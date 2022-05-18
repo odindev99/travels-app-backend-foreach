@@ -14,7 +14,7 @@ exports.singin = async (req, res, next) => {
 			(await User.countDocuments({ email })) === 0 ? false : true;
 
 		if (existingEmail) {
-			throwError("Alredy exist a user with this email!", 406);
+			throwError("Ya existe un usuario con este correo!", 406);
 		}
 
 		//# Se encripta la contraseña 

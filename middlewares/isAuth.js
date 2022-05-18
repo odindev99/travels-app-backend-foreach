@@ -6,7 +6,7 @@ module.exports = async (req, res, next) => {
 	const authHeader = req.get("Authorization");
 	try {
 		if (!authHeader) {
-			throwError("Usuario no autenticado", 401)
+			throwError("Usuario no autenticado!", 401)
 		}
 
 		const token = req.get("Authorization").split(" ")[1];
@@ -16,7 +16,7 @@ module.exports = async (req, res, next) => {
 			if (err) {
 				err.status = 401;
 				err.message =
-					"Your token is expired or is invalid, please go to login and request a new token";
+					"Token de autenticacion expirado o invalido, por favor vuelve a iniciar sesión!";
 				throw err;
 			}
 
@@ -27,7 +27,7 @@ module.exports = async (req, res, next) => {
 
 		if (!logedUser) {
 			throwError(
-				`Doesn't exist a user with this credentials, please try again!`,
+				`No existe un usuario con estas credenciales, por favor intenta de nuevo!`,
 				404
 			);
 		}
